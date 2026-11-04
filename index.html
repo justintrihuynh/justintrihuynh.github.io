@@ -464,13 +464,13 @@ footer .fine{font-size:.82rem;color:var(--muted);margin-top:24px}
         <div>
           <div class="eyebrow">Force plates · Team dashboard</div>
           <h3>HawkinDash</h3>
-          <p>A dashboard for force-plate testing. The staff version is built to pull jumps from Hawkin Dynamics, filter by test type, team, and date range, and turn them into a team overview, a sortable athlete leaderboard, and weekly trends. The demo below runs on simulated data.</p>
+          <p>A force-plate dashboard designed to organize jump testing into team summaries, athlete profiles, and weekly trends. The public demonstration uses simulated data to showcase the dashboard's workflow and functionality.</p>
         </div>
         <ul class="does">
-          <li>Team summary at a glance: total tests, athletes tested, average jump height, RSI, asymmetry, and tests this week.</li>
-          <li>Leaderboard with average and peak jump height, RSI, left/right asymmetry, a 7-day trend, and the last test date.</li>
-          <li>Trends view tracks weekly team jump height and RSI for any team or test type.</li>
-          <li>The staff version syncs from Hawkin without manual exports, and athlete names stay hidden until staff choose to show them.</li>
+          <li>Team summary: total tests, athletes tested, average jump height, RSI, asymmetry, and testing frequency.</li>
+          <li>Athlete leaderboard with average and peak jump height, RSI, asymmetry, and trends.</li>
+          <li>Team trends across testing periods.</li>
+          <li>Filtering by team, test type, and date range.</li>
         </ul>
       </div>
       <div class="frame">
@@ -781,8 +781,8 @@ var W={};
   function f1(v,u){return v==null?"–":v.toFixed(1)+(u||"");}
   function render(){
     var ts=filt(),rs=rows(ts),end=d2n(st.to);
-    var h='<div class="app-top"><div><strong>HawkinDash</strong><small class="hd-demo">SIMULATED DEMO DATA</small></div><div class="nav"><button data-hd="names" aria-pressed="'+st.names+'">'+(st.names?"Hide names":"Show names")+'</button></div></div>';
-    h+='<p class="small hd-note">This public demonstration uses simulated athlete data. The staff-facing system is designed to integrate with Hawkin Dynamics.</p>';
+    var h='<div class="app-top"><div><strong>HawkinDash</strong><small class="hd-demo">SIMULATED DATA · NO LIVE CONNECTION</small></div><div class="nav"><button data-hd="names" aria-pressed="'+st.names+'">'+(st.names?"Hide names":"Show names")+'</button></div></div>';
+    h+='<p class="small hd-note">This public demonstration uses simulated athlete data generated in the page. It is not connected to a Hawkin Dynamics account.</p>';
     if(st.msg)h+='<p class="small" style="margin:-6px 0 12px;color:var(--muted)">'+esc(st.msg)+'</p>';
     h+='<div class="hd-filters"><label class="small">Test type <select id="hd-type"><option value="all">All types</option>'+TYPES.map(function(t){return'<option'+(st.type===t?" selected":"")+'>'+t+'</option>';}).join("")+'</select></label>'+
       '<label class="small">Team <select id="hd-team"><option value="all">All teams</option>'+TEAMS.map(function(t){return'<option'+(st.team===t?" selected":"")+'>'+t+'</option>';}).join("")+'</select></label>'+
@@ -797,14 +797,14 @@ var W={};
       list.sort(function(x,y){var a=x[st.sort],b=y[st.sort];if(st.sort==="code"){a=x.a.code;b=y.a.code;return st.dir*a.localeCompare(b);}if(a==null)return 1;if(b==null)return -1;return st.dir*(a-b);});
       function th(k,l){return'<th><button data-hds="'+k+'">'+l+(st.sort===k?(st.dir>0?" ↑":" ↓"):"")+'</button></th>';}
       h+='<div class="row" style="margin-bottom:10px"><strong style="font:600 1.15rem var(--display);letter-spacing:.03em;text-transform:uppercase">Athlete leaderboard</strong><input type="search" id="hd-q" placeholder="Search athlete or team" value="'+esc(st.q)+'" style="font:inherit;font-size:.86rem;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)"></div>';
-      h+='<div class="tscroll"><table><thead><tr><th class="left">#</th><th class="left"><button data-hds="code">Athlete'+(st.sort==="code"?(st.dir>0?" ↑":" ↓"):"")+'</button></th><th>Team</th>'+th("n","Tests")+th("avg","Avg height")+th("peak","Peak height")+th("rsi","RSI")+th("mag","Asym. magnitude")+th("bias","L/R bias")+th("trend","7-day trend")+th("last","Last test")+'</tr></thead><tbody>';
+      h+='<div class="tscroll"><table><thead><tr><th class="left">#</th><th class="left"><button data-hds="code">Athlete'+(st.sort==="code"?(st.dir>0?" ↑":" ↓"):"")+'</button></th><th>Team</th>'+th("n","Tests")+th("avg","Avg height")+th("peak","Peak height")+th("rsi","RSI")+th("mag","Asym. magnitude")+th("bias","L/R bias (directional)")+th("trend","7-day trend")+th("last","Last test")+'</tr></thead><tbody>';
       list.forEach(function(r,i){var ab=r.mag,ac=ab>=10?"z-nw":ab>=5?"z-bw":"z-el",bs=Math.abs(r.bias)<0.5?"Even":(r.bias>0?"R ":"L ")+Math.abs(r.bias).toFixed(1)+"%";
         var tc=r.trend==null?"flat":r.trend>=3?"up":r.trend<=-3?"down":"flat";
         h+='<tr><td class="left">'+(i+1)+'</td><td class="left"><strong>'+esc(st.names?r.a.code:r.a.code)+'</strong></td><td class="muted">'+r.a.team+'</td><td>'+r.n+'</td><td>'+f1(r.avg," cm")+'</td><td>'+f1(r.peak," cm")+'</td><td>'+r.rsi.toFixed(2)+'</td>'+
-          '<td><span class="zpill '+ac+'" data-tip="Average size of the left/right difference across tests, ignoring direction."><i></i>'+r.mag.toFixed(1)+'%</span></td><td data-tip="Average signed difference across tests. R = right side higher, L = left side higher.">'+bs+'</td>'+
+          '<td><span class="zpill '+ac+'" data-tip="Asymmetry magnitude represents the average absolute left/right difference across recorded tests. Interpret alongside test reliability, athlete history, task demands, and repeated measurements."><i></i>'+r.mag.toFixed(1)+'%</span></td><td data-tip="Directional asymmetry: the average signed difference across tests. Demo convention: positive = right side higher (R), negative = left side higher (L).">'+bs+'</td>'+
           '<td><span class="chg '+tc+'" style="display:inline">'+(r.trend==null?"–":(r.trend>0?"▲ +":"▼ ")+r.trend.toFixed(1)+"%")+'</span></td><td class="muted">'+(r.last?us(r.last):"–")+'</td></tr>';});
       if(!list.length)h+='<tr><td colspan="11" class="muted">No athlete matches “'+esc(st.q)+'”.</td></tr>';
-      h+='</tbody></table></div><p class="legend">Click a column to sort. 7-day trend compares the last week’s average jump height with the four weeks before it; ▲/▼ mark changes of 3% or more. Asymmetry magnitude is the average size of the left/right difference across tests, ignoring direction, and is shaded by size. L/R bias is the average signed difference (R = right side higher, L = left side higher); opposite-side results cancel out in the bias, which is why magnitude is reported separately.</p>';
+      h+='</tbody></table></div><p class="legend">Click a column to sort. 7-day trend compares the last week’s average jump height with the four weeks before it; ▲/▼ mark changes of 3% or more. Asymmetry magnitude is the mean of the absolute left/right differences across recorded tests, so opposite directions cannot cancel out. L/R bias is the mean of the signed differences; in this demo, positive values mean the right side was higher (R) and negative values mean the left side was higher (L). Magnitude shading uses display bands of 5% and 10% chosen for this demo, not universal standards. Interpret alongside test reliability, athlete history, task demands, and repeated measurements.</p>';
     } else if(st.tab==="analysis"){
       var cmj=ts.filter(function(t){return t.type===TYPES[0];}),best={};
       cmj.forEach(function(t){var b=best[t.a.id];if(!b||t.jh>b.jh)best[t.a.id]=t;});
@@ -869,9 +869,10 @@ var W={};
   var MET=[{k:"cmj",label:"CMJ",unit:"in",lower:false,dec:1,base:22.5,sd:2.6},{k:"approach",label:"Approach",unit:"in",lower:false,dec:1,base:24.5,sd:2.8},{k:"broad",label:"Broad",unit:"in",lower:false,dec:1,base:82,sd:6},
     {k:"accel10",label:"10 yd",unit:"s",lower:true,dec:2,base:1.98,sd:0.07},{k:"fly10",label:"Fly 10",unit:"s",lower:true,dec:2,base:1.26,sd:0.06},{k:"court34",label:"¾ Court",unit:"s",lower:true,dec:2,base:3.72,sd:0.14},
     {k:"cod505L",label:"5-0-5 L",unit:"s",lower:true,dec:2,base:2.56,sd:0.09},{k:"cod505R",label:"5-0-5 R",unit:"s",lower:true,dec:2,base:2.54,sd:0.09}];
-  function note(m,zv){var above=zv>=0,cmp=m.lower?(above?"faster than":"slower than"):(above?"above":"below");
-    return above?m.label+" performance is "+cmp+" the team average. Review alongside other performance measures and sport-specific observations."
-                :m.label+" performance is "+cmp+" the team average. A potential development area: consider reviewing training history, recent workload, and athlete feedback before determining development priorities.";}
+  function note(m,zv){
+    if(Math.abs(zv)<0.25)return"This result is near the current testing-group average. Continue monitoring across testing sessions.";
+    return zv>0?"This result is above the current testing-group average. Review alongside other performance measures and sport-specific observations."
+               :"This result is below the current testing-group average, a potential development area worth coach follow-up. Consider training history, recent workload, and athlete feedback before determining appropriate development priorities.";}
   var ath=NAMES.map(function(n,i){var f=gauss(),sp=gauss()*0.7+f*0.5,s={},fl={};
     MET.forEach(function(m){var z=(m.k==="cmj"||m.k==="approach"||m.k==="broad")?f*0.8+gauss()*0.6:sp*0.8+gauss()*0.6;var v=m.base+(m.lower?-1:1)*z*m.sd;
       s[m.k]=v;var imp=(m.lower?-1:1)*m.sd*(0.1+R()*0.45)*(R()<0.15?-0.6:1);fl[m.k]=v+imp;});
@@ -894,7 +895,7 @@ var W={};
     h+='<div class="tscroll"><table><thead><tr><th class="left">Athlete</th><th>Pos</th>'+MET.map(function(m){return'<th>'+m.label+' ('+m.unit+')</th>';}).join("")+'</tr></thead><tbody>';
     if(!rows.length)h+='<tr><td colspan="'+(2+MET.length)+'" class="muted">No athletes are in this zone for '+esc(sm.label)+'.</td></tr>';
     rows.forEach(function(a){h+='<tr><td class="left"><button class="linkbtn" data-tp="'+a.id+'">'+esc(a.name)+'</button></td><td>'+a.pos+'</td>'+MET.map(function(m){var z=zone(a["z_"+m.k]);return'<td data-tip="'+esc(m.label+": "+fv(m,a.fall[m.k])+" "+m.unit+"<br>"+z+", "+a["pct_"+m.k]+"th percentile<br>Summer: "+fv(m,a.summer[m.k]))+'"><span class="zpill '+ZC[z]+'"><i></i><span class="zv" style="display:inline">'+fv(m,a.fall[m.k])+'</span></span>'+chg(m,a)+'</td>';}).join("")+'</tr>';});
-    return h+'</tbody></table></div><p class="legend">Fall testing results. Performance classifications are based on team-relative z-scores and reflect comparisons within this testing group, not external normative standards. Zones: Elite ≥ +1, Above Avg 0 to +1, Below Avg −1 to 0, Needs Work below −1; for timed tests, faster is better. The small number under each result is the change since summer testing, green when it improved.</p>';}
+    return h+'</tbody></table></div><p class="legend">Simulated fall testing results. Performance classifications are based on team-relative z-scores and reflect comparisons within this testing group, not external normative standards. They are not universal performance standards and should be considered alongside other performance information. Zones: Elite ≥ +1, Above Avg 0 to +1, Below Avg −1 to 0, Needs Work below −1; for timed tests, faster is better. The small number under each result is the change since summer testing, green when it improved.</p>';}
   function speed(){
     var W=560,H=360,L=52,B=44,T=16,Rr=16;
     var xs=ath.map(function(a){return a.fall.accel10;}),ys=ath.map(function(a){return a.fall.fly10;});
@@ -925,7 +926,7 @@ var W={};
       var col={"Elite":"var(--good)","Above Avg":"var(--ok)","Below Avg":"var(--warn)","Needs Work":"var(--crit)"}[z];
       return'<div class="bar-row"><span>'+m.label+'</span><div class="track" data-tip="'+esc(m.label+": "+p+"th percentile ("+z+")")+'"><span style="width:'+Math.max(p,2)+'%;background:'+col+'"></span></div><span class="num" style="text-align:right">'+fv(m,a.fall[m.k])+' '+m.unit+chg(m,a)+'</span></div>';}).join("")+'</div><p class="legend">Dashed line is the team median. Bar color shows the zone. Performance classifications are based on team-relative z-scores and reflect comparisons within this testing group, not external normative standards.</p></div>';
     var srt=MET.slice().sort(function(x,y){return a["z_"+y.k]-a["z_"+x.k];});
-    h+='<div class="panel"><h4>Notes for coach follow-up</h4>'+srt.slice(0,2).concat(srt.slice(-2).reverse()).map(function(m){var zv=a["z_"+m.k];return'<div class="insight '+(zv>=0?"good":"bad")+'"><b>'+m.label+':</b> '+note(m,zv)+'</div>';}).join("")+'<p class="legend" style="margin-top:8px">Highest and lowest results relative to this testing group. Notes describe the data only; they do not identify technical causes or on-court ability.</p></div></div>';
+    h+='<div class="panel"><h4>Notes for coach follow-up</h4>'+srt.slice(0,2).concat(srt.slice(-2).reverse()).map(function(m){var zv=a["z_"+m.k];return'<div class="insight '+(Math.abs(zv)<0.25?"":zv>0?"good":"bad")+'"><b>'+m.label+':</b> '+note(m,zv)+'</div>';}).join("")+'<p class="legend" style="margin-top:8px">Highest and lowest results relative to this testing group. Notes describe the data only; they do not identify technical causes or on-court ability.</p></div></div>';
     return h;}
   function render(){
     var tabs=[["overview","Overview"],["speed","Speed & agility"],["profile","Player profile"]];
