@@ -870,9 +870,9 @@ var W={};
     {k:"accel10",label:"10 yd",unit:"s",lower:true,dec:2,base:1.98,sd:0.07},{k:"fly10",label:"Fly 10",unit:"s",lower:true,dec:2,base:1.26,sd:0.06},{k:"court34",label:"¾ Court",unit:"s",lower:true,dec:2,base:3.72,sd:0.14},
     {k:"cod505L",label:"5-0-5 L",unit:"s",lower:true,dec:2,base:2.56,sd:0.09},{k:"cod505R",label:"5-0-5 R",unit:"s",lower:true,dec:2,base:2.54,sd:0.09}];
   function note(m,zv){
-    if(Math.abs(zv)<0.25)return"This result is near the current testing-group average. Continue monitoring across testing sessions.";
-    return zv>0?"This result is above the current testing-group average. Review alongside other performance measures and sport-specific observations."
-               :"This result is below the current testing-group average, a potential development area worth coach follow-up. Consider training history, recent workload, and athlete feedback before determining appropriate development priorities.";}
+    if(Math.abs(zv)<0.25)return"Relative performance is near the current testing-group average. Continue monitoring across testing sessions.";
+    return zv>0?"Relative performance is above the current testing-group average. Review alongside other performance measures and sport-specific observations."
+               :"Relative performance is below the current testing-group average. Consider training history, recent workload, and athlete feedback before determining appropriate development priorities.";}
   var ath=NAMES.map(function(n,i){var f=gauss(),sp=gauss()*0.7+f*0.5,s={},fl={};
     MET.forEach(function(m){var z=(m.k==="cmj"||m.k==="approach"||m.k==="broad")?f*0.8+gauss()*0.6:sp*0.8+gauss()*0.6;var v=m.base+(m.lower?-1:1)*z*m.sd;
       s[m.k]=v;var imp=(m.lower?-1:1)*m.sd*(0.1+R()*0.45)*(R()<0.15?-0.6:1);fl[m.k]=v+imp;});
