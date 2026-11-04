@@ -810,7 +810,7 @@ var W={};
       cmj.forEach(function(t){var b=best[t.a.id];if(!b||t.jh>b.jh)best[t.a.id]=t;});
       var pts=Object.keys(best).map(function(k){return best[k];});
       h=h.replace(/<div class="stats">[\s\S]*$/,"");
-      h+='<div class="hd-banner"><b>CMJ only</b><span>Best countermovement jump per athlete · '+pts.length+' athletes · '+cmj.length+' CMJ tests in range</span><span class="hd-banner-r">Cut lines are the averages of the athletes shown</span></div>';
+      h+='<div class="hd-banner"><b>CMJ only</b><span>Best countermovement jump per athlete · '+pts.length+' athletes · '+cmj.length+' CMJ tests in range</span><span class="hd-banner-r">Higher / lower = at or above / below the average of the athletes shown</span></div>';
       if(pts.length<2){h+='<p class="muted">Not enough countermovement jumps in this range. Widen the dates or clear the filters.</p>';}
       else{
         var ax=mean(pts.map(function(t){return t.rsi;})),ay=mean(pts.map(function(t){return t.jh;}));
@@ -818,7 +818,7 @@ var W={};
         var x0=Math.min.apply(null,xs),x1=Math.max.apply(null,xs),y0=Math.min.apply(null,ys),y1=Math.max.apply(null,ys);
         var px=(x1-x0)*0.12||0.05,py=(y1-y0)*0.12||2;x0-=px;x1+=px;y0-=py;y1+=py;
         var W=640,H=380,L=52,B=42,T=14,Rr=14,X=function(v){return L+(v-x0)/(x1-x0)*(W-L-Rr);},Y=function(v){return T+(1-(v-y0)/(y1-y0))*(H-T-B);};
-        var Q={el:["Elite","var(--good)"],re:["Add reactive work","var(--warn)"],st:["Add strength work","var(--mark)"],fo:["Foundation focus","var(--crit)"]};
+        var Q={el:["Higher Jump Height / Higher mRSI","var(--good)"],re:["Higher Jump Height / Lower mRSI","var(--warn)"],st:["Lower Jump Height / Higher mRSI","var(--mark)"],fo:["Lower Jump Height / Lower mRSI","var(--crit)"]};
         function q(t){return t.jh>=ay?(t.rsi>=ax?"el":"re"):(t.rsi>=ax?"st":"fo");}
         var s='<svg viewBox="0 0 '+W+' '+H+'" width="100%" role="img" aria-label="Quadrant chart of mRSI versus best jump height" style="display:block;max-width:100%">';
         [["re",L,T,X(ax)-L,Y(ay)-T],["el",X(ax),T,W-Rr-X(ax),Y(ay)-T],["fo",L,Y(ay),X(ax)-L,H-B-Y(ay)],["st",X(ax),Y(ay),W-Rr-X(ax),H-B-Y(ay)]].forEach(function(r){
@@ -827,8 +827,8 @@ var W={};
         for(var v=Math.ceil(x0/lx)*lx;v<=x1;v+=lx)s+='<line x1="'+X(v)+'" x2="'+X(v)+'" y1="'+T+'" y2="'+(H-B)+'" stroke="var(--grid)"/><text x="'+X(v)+'" y="'+(H-B+16)+'" text-anchor="middle">'+v.toFixed(2)+'</text>';
         for(var u=Math.ceil(y0/5)*5;u<=y1;u+=5)s+='<line x1="'+L+'" x2="'+(W-Rr)+'" y1="'+Y(u)+'" y2="'+Y(u)+'" stroke="var(--grid)"/><text x="'+(L-8)+'" y="'+(Y(u)+4)+'" text-anchor="end">'+u+'</text>';
         s+='<line x1="'+X(ax)+'" x2="'+X(ax)+'" y1="'+T+'" y2="'+(H-B)+'" stroke="var(--muted)" stroke-dasharray="4 4"/><line x1="'+L+'" x2="'+(W-Rr)+'" y1="'+Y(ay)+'" y2="'+Y(ay)+'" stroke="var(--muted)" stroke-dasharray="4 4"/>';
-        s+='<text x="'+(L+6)+'" y="'+(T+14)+'" style="fill:var(--warn);font-weight:500">ADD REACTIVE WORK</text><text x="'+(X(ax)+6)+'" y="'+(T+14)+'" style="fill:var(--good);font-weight:500">ELITE</text>';
-        s+='<text x="'+(L+6)+'" y="'+(H-B-8)+'" style="fill:var(--crit);font-weight:500">FOUNDATION FOCUS</text><text x="'+(W-Rr-6)+'" y="'+(H-B-8)+'" text-anchor="end" style="fill:var(--mark);font-weight:500">ADD STRENGTH WORK</text>';
+        s+='<text x="'+(L+6)+'" y="'+(T+14)+'" style="fill:var(--warn);font-weight:500">HIGHER JUMP HEIGHT / LOWER mRSI</text><text x="'+(X(ax)+6)+'" y="'+(T+14)+'" style="fill:var(--good);font-weight:500">HIGHER JUMP HEIGHT / HIGHER mRSI</text>';
+        s+='<text x="'+(L+6)+'" y="'+(H-B-8)+'" style="fill:var(--crit);font-weight:500">LOWER JUMP HEIGHT / LOWER mRSI</text><text x="'+(W-Rr-6)+'" y="'+(H-B-8)+'" text-anchor="end" style="fill:var(--mark);font-weight:500">LOWER JUMP HEIGHT / HIGHER mRSI</text>';
         s+='<text x="'+(L+6)+'" y="'+(Y(ay)-6)+'">Avg '+ay.toFixed(1)+' cm</text><text x="'+(X(ax)+6)+'" y="'+(T+30)+'">Avg mRSI '+ax.toFixed(2)+'</text>';
         s+='<text x="'+((L+W-Rr)/2)+'" y="'+(H-6)+'" text-anchor="middle">mRSI (reactive strength)</text><text transform="translate(14 '+((T+H-B)/2)+') rotate(-90)" text-anchor="middle">Best jump height (cm)</text>';
         pts.forEach(function(t){var k=q(t);s+='<circle cx="'+X(t.rsi)+'" cy="'+Y(t.jh)+'" r="7" fill="'+Q[k][1]+'" stroke="var(--surface)" stroke-width="2"/><circle cx="'+X(t.rsi)+'" cy="'+Y(t.jh)+'" r="14" fill="transparent" data-tip="'+esc("<b>"+t.a.code+"</b> · "+t.a.team+"<br>Best CMJ "+t.jh.toFixed(1)+" cm · mRSI "+t.rsi.toFixed(2)+"<br>"+Q[k][0])+'"/>';});
@@ -836,7 +836,7 @@ var W={};
         var groups={el:[],re:[],st:[],fo:[]};pts.forEach(function(t){groups[q(t)].push(t.a.code);});
         h+='<div class="panel" style="margin-bottom:14px"><h4>mRSI vs jump height: quadrant analysis</h4>'+s+'</div>';
         h+='<div class="hd-quads">'+["el","re","st","fo"].map(function(k){return'<div class="hd-q"><span class="zpill" style="background:transparent;padding-left:0"><i style="background:'+Q[k][1]+'"></i><b>'+Q[k][0]+'</b></span><span class="muted small">'+(groups[k].length?groups[k].join(", "):"None in this range")+'</span></div>';}).join("")+'</div>';
-        h+='<p class="legend">Each dot is one athlete’s best countermovement jump in the range. Dashed lines are the averages of the athletes shown, so filter to one team to rank athletes within their own team. High jump with low mRSI points to reactive work; high mRSI with a lower jump points to strength work.</p>';
+        h+='<p class="legend">Each dot is one athlete’s best countermovement jump in the range. Dashed lines are the averages of the athletes shown: “higher” means at or above that group’s average and “lower” means below it, so filtering to one team compares athletes within their own team. Quadrants describe the relationship between selected performance measures. They are intended to support further assessment and coaching discussion, not independently prescribe training interventions.</p>';
       }
     } else {
       var wks=[];for(var s=st.from;s<=st.to;s=addDays(s,7))wks.push(s);
