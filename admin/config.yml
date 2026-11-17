@@ -1,0 +1,39 @@
+backend:
+  name: github
+  repo: justintrihuynh/justintrihuynh.github.io
+  branch: main
+  commit_messages:
+    create: "Add post: {{slug}}"
+    update: "Update post: {{slug}}"
+    delete: "Delete post: {{slug}}"
+    uploadMedia: "Upload image: {{path}}"
+    deleteMedia: "Delete image: {{path}}"
+
+site_url: https://justintrihuynh.github.io
+display_url: https://justintrihuynh.github.io/#writing
+media_folder: assets/blog
+public_folder: /assets/blog
+
+collections:
+  - name: posts
+    label: Posts
+    label_singular: Post
+    description: "Turn on Published to put a post on the site. Leave it off to keep it as a draft. Drafts never appear on the site, but the repository is public, so anyone browsing it on GitHub could read a draft."
+    folder: _posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    view_filters:
+      - label: Drafts
+        field: published
+        pattern: false
+      - label: Published
+        field: published
+        pattern: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime }
+      - { label: "Summary (one sentence shown in the Writing list)", name: summary, widget: text }
+      - { label: Published, name: published, widget: boolean, default: false, hint: "Off = draft (not on the site). On = live on the Writing tab within a couple of minutes." }
+      - { label: Body, name: body, widget: markdown }

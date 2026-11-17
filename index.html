@@ -328,6 +328,7 @@ footer .fine{font-size:.82rem;color:var(--muted);margin-top:24px}
   .hero{padding-block:36px 28px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.post-list{display:grid;gap:14px;margin-top:24px}.post-item{display:block;padding:18px 20px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:inherit;text-decoration:none}.post-item:hover{border-color:var(--orange)}.post-item h3{margin:6px 0 0}.post-item p{margin:6px 0 0}
 </style>
 </head>
 <body>
@@ -339,6 +340,7 @@ footer .fine{font-size:.82rem;color:var(--muted);margin-top:24px}
       <a href="#about" data-view="about">About</a>
       <a href="#sports-science" data-view="sports-science">Sports Science</a>
       <a href="#experience" data-view="experience">Experience</a>
+      <a href="#writing" data-view="writing" id="writing-link" hidden>Writing</a>
       <button type="button" class="tocontact">Contact</button>
     </div>
   </div>
@@ -581,6 +583,16 @@ footer .fine{font-size:.82rem;color:var(--muted);margin-top:24px}
 
 </div>
 
+<div class="view" id="v-writing" hidden>
+<section class="block">
+  <div class="wrap">
+    <h2>Writing</h2>
+    <p class="muted" style="margin-top:8px">Notes on training, testing, and coaching.</p>
+    <div id="post-list" class="post-list"></div>
+  </div>
+</section>
+</div>
+
 </main>
 
 <footer id="contact">
@@ -651,13 +663,21 @@ document.addEventListener("mousemove",function(e){var t=e.target.closest&&e.targ
   var w=tipEl.offsetWidth,h=tipEl.offsetHeight,x=e.clientX+14,y=e.clientY-h-10;if(x+w>innerWidth-8)x=e.clientX-w-14;if(y<8)y=e.clientY+16;tipEl.style.left=x+"px";tipEl.style.top=y+"px";});
 document.addEventListener("scroll",function(){tipEl.classList.remove("on");},{passive:true});
 
-var VIEWS=["home","about","sports-science","experience"];
+var VIEWS=["home","about","sports-science","experience","writing"];
 function route(){var h=(location.hash||"").slice(1);if(VIEWS.indexOf(h)<0)h="home";
   VIEWS.forEach(function(v){$("v-"+v).hidden=v!==h;});
   document.querySelectorAll(".tablinks a").forEach(function(a){if(a.dataset.view===h)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
   tipEl.classList.remove("on");window.scrollTo(0,0);}
 window.addEventListener("hashchange",function(){if(location.hash==="#contact"){$("contact").scrollIntoView();return;}route();});
 if(location.hash==="#contact"){route();setTimeout(function(){$("contact").scrollIntoView();},50);}else route();
+fetch("/posts.json",{cache:"no-cache"}).then(function(r){return r.ok?r.json():[];}).then(function(ps){
+  if(!ps||!ps.length)return;var box=$("post-list");
+  ps.forEach(function(p){var a=document.createElement("a");a.className="post-item";a.href=p.url;
+    var d=document.createElement("div");d.className="eyebrow";d.textContent=p.date;
+    var t=document.createElement("h3");t.textContent=p.title;a.appendChild(d);a.appendChild(t);
+    if(p.summary){var s=document.createElement("p");s.className="muted";s.textContent=p.summary;a.appendChild(s);}
+    box.appendChild(a);});
+  $("writing-link").hidden=false;if(location.hash==="#writing")route();}).catch(function(){});
 document.querySelectorAll(".tocontact").forEach(function(b){b.addEventListener("click",function(){$("contact").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});});});
 document.querySelectorAll(".toolpick button").forEach(function(b){b.addEventListener("click",function(){
   document.querySelectorAll(".toolpick button").forEach(function(x){x.setAttribute("aria-selected",String(x===b));});

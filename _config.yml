@@ -1,0 +1,14 @@
+title: Justin Huynh
+timezone: America/Denver
+permalink: /posts/:title/
+markdown: kramdown
+future: true
+exclude:
+  - README.md
+  - render.yaml
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
