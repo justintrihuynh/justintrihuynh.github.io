@@ -5,32 +5,62 @@ summary: Welcome to the blog, a little bit about me and  the meaning behind the 
 published: false
 ---
 
-**Introduction** 
+# Introduction
 
-Welcome to the first post, if you're reading this when it is first published, thank you! If I end up writing down the road and somehow, in some way, I am "well renowned" (I really do not seek nor want that), and you end up going down the rabbit hole, thank you! 
+Welcome to the first post! If you're reading this when it's first published, thank you! If I end up writing down the road and somehow, in some way, become "well-renowned" (something I really don't seek or want), and you end up going down the rabbit hole, thank you!
 
-If you want to see more about me just [click here](https://justintrihuynh.github.io/#about) or if you want to dive into resume [here it is](https://justintrihuynh.github.io/#experience).  
+If you want to learn more about me, just [click here](https://justintrihuynh.github.io/#about), or if you want to dive into my resume, [here it is](https://justintrihuynh.github.io/#experience).
 
-**The Lore - The Crisis of Writing**
+# The Lore – The Crisis of Writing
 
-After graduating from the University of Puget Sound, I became a personal trainer for a small business, COR Physical Therapy and Personal Training. Dr. John Mullen (Mr. Triple OG), the owner at the time, encouraged me to write a few articles. I managed to get something on STACK and Swimming World Magazine.
+After graduating from the University of Puget Sound, I became a personal trainer for a small business, COR Physical Therapy and Personal Training. Dr. John Mullen (Mr. Triple OG), the owner at the time, encouraged me to write a few articles. I managed to get published on STACK and Swimming World Magazine.
 
-Writing has always been something I have **_despised_**! In high school and college, whenever people would look at my work, it was dreadful. But writing articles was calming, engaging, and freeing. Maybe expressing the subject matter in training (something I am clearly passionate about) is way easier than writing a thesis on Beowulf or wading through bland statistics in a lab I am not enthusiastic about. 
+Writing has always been something I have **despised**! In high school and college, whenever people looked at my work, it was dreadful. But writing articles was calming, engaging, and freeing. Maybe expressing ideas about training (something I'm clearly passionate about) is much easier than writing a thesis on Beowulf or wading through bland statistics in a lab I'm not particularly enthusiastic about.
 
-That being said, I want to write about once a month to get some thoughts out. Writing can get my thoughts on "paper" so ideas are concrete. To those reading this, throw your opinion in: is my thought process on the right track? 
+That being said, I want to write about once a month to get some thoughts out. Writing allows me to put my thoughts on "paper" so ideas become concrete. To those reading this, throw your opinion into the mix: Is my thought process on the right track?
 
-If you find it entertaining and relate to it, please comment or email me. I want to attract like-minded individuals who want to collaborate because I don't claim to have all the answers. 
+If you find it entertaining and relatable, please comment or email me. I want to attract like-minded individuals who want to collaborate because I don't claim to have all the answers.
 
-**The Logo - Nike, Jordan, Undefeated, Kaw's, Patagonia... the list goes on**
+# The Logo – Nike, Jordan, Undefeated, KAWS, Patagonia... The List Goes On
 
-This is more anecdotal, but if you love sports and work in basketball, there is a high likelihood you **LOVE** sneakers.  There is a high likelihood you appreciate some form of fashion brand, streetwear or pop art. No, I am not talking about going to the Louvre and seeing the Mona Lisa; (still a great experience) I mean going to the Brooklyn Art Museum only to be really thrilled to see a Kith t-shirt in the bookstore and seeing a Godzilla-like statue of the KAW's logo. I am labeled as an analytical type; I love learning about systems, organization, and applying them (high kinesthetic, visual learner over here). 
+This is more anecdotal, but if you love sports and work in basketball, there's a pretty good chance you **LOVE** sneakers. There's also a good chance you appreciate some form of fashion brand, streetwear, or pop art.
 
-As a teenager, I picked up the guitar; I loved the drills and monotony, but when it came to creating a solo, I was awful. Unfortunately, not being able to shred notes on a fretboard deterred me a bit. Honestly, I felt like it connected to my writing. My lack of feel to be creative was just not there. 
+No, I'm not talking about going to the Louvre and seeing the Mona Lisa (still a great experience). I mean going to the Brooklyn Museum, only to be really thrilled about seeing a Kith T-shirt in the bookstore and a Godzilla-like statue of the KAWS logo.
 
-However, logos and brands that were catchy, deep down, stood out to me. Look at the Nike check, the Jordan Jump man silhouette, the Kaw's X logo. Something about that always stood out, it was timeless, bold yet simple but had this boutique yet natural versatility. 
+I'm generally labeled as an analytical type. I love learning about systems, organization, and how to apply them. I'm a highly kinesthetic and visual learner.
 
-So when you see my logo, it is a work in progress but is signifies more. When I punched the information into Claude (yes, I am using AI services to help me) I wanted something that resembled what I believed in and what defined me. 
+As a teenager, I picked up the guitar. I loved the drills and monotony, but when it came to creating a solo, I was awful. Unfortunately, not being able to shred notes on a fretboard deterred me a bit. Honestly, I felt like it connected to my writing. My creative instincts just weren't there.
 
-_NO, IT IS NOT AN EKG!!_
+However, logos and brands that were catchy always stood out to me. Look at the Nike Swoosh, the Jordan Jumpman silhouette, or the KAWS X. Something about those designs always caught my attention. They were timeless, bold yet simple, and had this boutique feel with a natural versatility.
 
-Okay, I get it, the logo right now looks like an EKG but the thought is that is the different phases of a countermovement jump when you see a force plate. The force plate, if not jumping always called to me as a coach. I have always wanted to dunk a basketball (still a work in progress), but which has made me want to continue to pursue my physical potential. Seeing a braking, amortization, and propulsive phase
+So, when you see my logo, understand that it's a work in progress, but it represents something more. When I plugged my ideas into Claude (yes, I'm using AI services to help me), I wanted something that resembled what I believed in and what defined me.
+
+**NO, IT IS NOT AN EKG!!**
+
+Okay, I get it. The logo currently looks like an EKG, but the idea is that it represents the different phases of a countermovement jump when viewed through a force plate.
+
+Force plates have always fascinated me as a coach. I've always wanted to dunk a basketball (still a work in progress), which has made me want to continue pursuing my physical potential.
+
+Seeing the braking, amortization, and propulsive phases of a jump has always signaled progress to me. Training is fair to everyone: what you put in is what you get out. If you're not serious, you won't get to where you want to go. If you work hard, remain consistent, and are process-oriented (think delayed gratification), you give yourself the opportunity to reach your potential.
+
+If you hone in on the line within the logo, you'll notice that it breaks through the circle. To me, that symbolizes breaking through barriers and pursuing one's potential.
+
+The line itself also represents something personal: getting out of my comfort zone.
+
+I'm a hermit. I love staying at home, but I've realized I need new hobbies. Fun fact for young coaches: training all the time, learning about training, giving back to the student-athletes you serve, and being a foodie is great and all, but it can make you pretty one-dimensional (and not particularly popular in the dating scene, but I digress).
+
+Recently, I took up fly fishing. One of my coworkers, Keita, took me out to the South Fork of the Boise River, and I was hooked! Two of my uncle's friends, Marc (Obi-Wan) and Doug (Yoda), gave me some additional lessons. The cerebral aspect of knowing which fly to use, reading a river, developing technical skills, and everything in between has me going crazy.
+
+I'm by no means a master fly fisherman. I'm a novice, learning, growing, and iterating on what I need to do better to catch some fish. Right now, call me a stubborn Anakin from Episode II.
+
+The overall aesthetic was also important to me. I wanted the logo to have the kind of recognizable silhouette you see with Nike and the Jumpman: something that stands out but remains simple. The feel was meant to resemble pop art: relaxed, fun, and inviting.
+
+I want the logo to evolve, grow, and embrace the journey of becoming something even better than where it started.
+
+# In Closing
+
+I don't claim to be the best performance coach out there. I'm still an applied sports scientist in training.
+
+Honestly, life is a continuous work in progress, full of peaks and valleys. The intent is ultimately to grow and climb toward the peak you've envisioned, knowing that the end is never really in sight.
+
+Let's go on this journey together and discover where potential lies. The path may not have an end, but the journey itself is where the fun begins.
