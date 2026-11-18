@@ -1,7 +1,7 @@
 ---
 title: 'The First Blog: The Story Behind the Logo'
 date: 2026-11-30T10:00:00
-summary: Welcome to the blog, a little bit about me and  the meaning behind the logo.
+summary: A little introduction to the person behind the logo, the inspiration behind its design, and the philosophy it represents.
 published: false
 ---
 
@@ -53,7 +53,7 @@ The line itself also represents something personal: getting out of my comfort zo
 
 I'm a hermit. I love staying at home, but I've realized I need new hobbies. Fun fact for young coaches: training all the time, learning about training, giving back to the student-athletes you serve, and being a foodie is great and all, but it can make you pretty one-dimensional (and not particularly popular in the dating scene, but I digress).
 
-Recently, I took up fly fishing. One of my coworkers, Keita, took me out to the South Fork of the Boise River, and I was hooked! Two of my uncle's friends, Marc (Obi-Wan) and Doug (Yoda), gave me some additional lessons. The cerebral aspect of knowing which fly to use, reading a river, developing technical skills, and everything in between has me going crazy.
+Recently, I took up fly fishing. One of my coworkers, Keita, took me out to the South Fork of the Boise River, and I was hooked! Two of my uncle's friends, Marc (Obi-Wan) and Doug (Yoda), gave me some additional lessons. The cerebral aspect of knowing which fly to use, reading a river, developing technical skills, and everything in between has me hooked.
 
 ![](/assets/blog/Fish.jpeg)
 
