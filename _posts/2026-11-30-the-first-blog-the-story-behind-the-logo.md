@@ -25,8 +25,6 @@ If you find it entertaining and relatable, please comment or email me. I want to
 
 This is more anecdotal, but if you love sports and work in basketball, there's a pretty good chance you **LOVE** sneakers. There's also a good chance you appreciate some form of fashion brand, streetwear, or pop art.
 
-![](/assets/blog/IMG_3660.JPG "What the Kobe's")
-
 No, I'm not talking about going to the Louvre and seeing the Mona Lisa (still a great experience). I mean going to the Brooklyn Museum, only to be really thrilled about seeing a Kith T-shirt in the bookstore and a Godzilla-like statue of the KAWS logo.
 
 ![](/assets/blog/KAWS.jpeg)
@@ -56,6 +54,8 @@ The line itself also represents something personal: getting out of my comfort zo
 I'm a hermit. I love staying at home, but I've realized I need new hobbies. Fun fact for young coaches: training all the time, learning about training, giving back to the student-athletes you serve, and being a foodie is great and all, but it can make you pretty one-dimensional (and not particularly popular in the dating scene, but I digress).
 
 Recently, I took up fly fishing. One of my coworkers, Keita, took me out to the South Fork of the Boise River, and I was hooked! Two of my uncle's friends, Marc (Obi-Wan) and Doug (Yoda), gave me some additional lessons. The cerebral aspect of knowing which fly to use, reading a river, developing technical skills, and everything in between has me going crazy.
+
+![](/assets/blog/Fish.jpeg)
 
 I'm by no means a master fly fisherman. I'm a novice, learning, growing, and iterating on what I need to do better to catch some fish. Right now, call me a stubborn Anakin from Episode II.
 
