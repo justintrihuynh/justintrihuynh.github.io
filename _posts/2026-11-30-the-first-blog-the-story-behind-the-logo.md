@@ -25,7 +25,11 @@ If you find it entertaining and relatable, please comment or email me. I want to
 
 This is more anecdotal, but if you love sports and work in basketball, there's a pretty good chance you **LOVE** sneakers. There's also a good chance you appreciate some form of fashion brand, streetwear, or pop art.
 
+![](/assets/blog/IMG_3660.JPG "What the Kobe's ")
+
 No, I'm not talking about going to the Louvre and seeing the Mona Lisa (still a great experience). I mean going to the Brooklyn Museum, only to be really thrilled about seeing a Kith T-shirt in the bookstore and a Godzilla-like statue of the KAWS logo.
+
+![](/assets/blog/KAWS.jpeg)
 
 I'm generally labeled as an analytical type. I love learning about systems, organization, and how to apply them. I'm a highly kinesthetic and visual learner.
 
@@ -36,6 +40,8 @@ However, logos and brands that were catchy always stood out to me. Look at the N
 So, when you see my logo, understand that it's a work in progress, but it represents something more. When I plugged my ideas into Claude (yes, I'm using AI services to help me), I wanted something that resembled what I believed in and what defined me.
 
 **NO, IT IS NOT AN EKG!!**
+
+![](/assets/blog/Justin_Huynh_badge.PNG)
 
 Okay, I get it. The logo currently looks like an EKG, but the idea is that it represents the different phases of a countermovement jump when viewed through a force plate.
 
