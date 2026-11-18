@@ -25,7 +25,7 @@ If you find it entertaining and relatable, please comment or email me. I want to
 
 This is more anecdotal, but if you love sports and work in basketball, there's a pretty good chance you **LOVE** sneakers. There's also a good chance you appreciate some form of fashion brand, streetwear, or pop art.
 
-![](/assets/blog/IMG_3660.JPG "What the Kobe's ")
+![](/assets/blog/IMG_3660.JPG "What the Kobe's")
 
 No, I'm not talking about going to the Louvre and seeing the Mona Lisa (still a great experience). I mean going to the Brooklyn Museum, only to be really thrilled about seeing a Kith T-shirt in the bookstore and a Godzilla-like statue of the KAWS logo.
 
@@ -47,7 +47,7 @@ Okay, I get it. The logo currently looks like an EKG, but the idea is that it re
 
 Force plates have always fascinated me as a coach. I've always wanted to dunk a basketball (still a work in progress), which has made me want to continue pursuing my physical potential.
 
-Seeing the braking, amortization, and propulsive phases of a jump has always signaled progress to me. Training is fair to everyone: what you put in is what you get out. If you're not serious, you won't get to where you want to go. If you work hard, remain consistent, and are process-oriented (think delayed gratification), you give yourself the opportunity to reach your potential.
+Seeing the eccentric braking, transition/amortization, and propulsive phases of a jump has always signaled progress to me. Training rewards consistency and hard work. If you're not serious, you won't get to where you want to go. If you work hard, remain consistent, and stay process-oriented (think delayed gratification), you give yourself the opportunity to reach your potential.
 
 If you hone in on the line within the logo, you'll notice that it breaks through the circle. To me, that symbolizes breaking through barriers and pursuing one's potential.
 
@@ -60,6 +60,8 @@ Recently, I took up fly fishing. One of my coworkers, Keita, took me out to the 
 I'm by no means a master fly fisherman. I'm a novice, learning, growing, and iterating on what I need to do better to catch some fish. Right now, call me a stubborn Anakin from Episode II.
 
 The overall aesthetic was also important to me. I wanted the logo to have the kind of recognizable silhouette you see with Nike and the Jumpman: something that stands out but remains simple. The feel was meant to resemble pop art: relaxed, fun, and inviting.
+
+> _The logo represents breaking through barriers and pursuing one's potential._
 
 I want the logo to evolve, grow, and embrace the journey of becoming something even better than where it started.
 
