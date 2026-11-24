@@ -13,7 +13,7 @@ If you want to learn more about me, just [click here](https://justintrihuynh.git
 
 # The Lore – The Crisis of Writing
 
-After graduating from the University of Puget Sound, I became a personal trainer for a small business, COR Physical Therapy and Personal Training. Dr. John Mullen (Mr. Triple OG), the owner at the time, encouraged me to write a few articles. I managed to get published on STACK and Swimming World Magazine.
+After graduating from the University of Puget Sound, I became a personal trainer for a small business, COR Physical Therapy and Personal Training. Dr. John Mullen (Mr. Triple OG), the owner at the time, encouraged me to write a few articles. I managed to get a few articles published on STACK and Swimming World Magazine.
 
 Writing has always been something I have **despised**! In high school and college, whenever people looked at my work, it was dreadful. But writing articles was calming, engaging, and freeing. Maybe expressing ideas about training (something I'm clearly passionate about) is much easier than writing a thesis on Beowulf or wading through bland statistics in a lab I'm not particularly enthusiastic about.
 
@@ -29,11 +29,11 @@ No, I'm not talking about going to the Louvre and seeing the Mona Lisa (still a 
 
 ![](/assets/blog/KAWS.jpeg)
 
-I'm generally labeled as an analytical type. I love learning about systems, organization, and how to apply them. I'm a highly kinesthetic and visual learner.
+I'm generally labeled as an analytical person. I love learning about systems, organization, and how to apply them. I'm a highly kinesthetic and visual learner.
 
 As a teenager, I picked up the guitar. I loved the drills and monotony, but when it came to creating a solo, I was awful. Unfortunately, not being able to shred notes on a fretboard deterred me a bit. Honestly, I felt like it connected to my writing. My creative instincts just weren't there.
 
-However, logos and brands that were catchy always stood out to me. Look at the Nike Swoosh, the Jordan Jumpman silhouette, or the KAWS X. Something about those designs always caught my attention. They were timeless, bold yet simple, and had this boutique feel with a natural versatility.
+However, logos and brands that were catchy always stood out to me. Look at the Nike Swoosh, the Jordan Jumpman silhouette, or the KAWS X. Something about those designs always caught my attention. They were timeless, bold yet simple, with a boutique feel and natural versatility.
 
 So, when you see my logo, understand that it's a work in progress, but it represents something more. When I plugged my ideas into Claude (yes, I'm using AI services to help me), I wanted something that resembled what I believed in and what defined me.
 
@@ -51,9 +51,9 @@ If you hone in on the line within the logo, you'll notice that it breaks through
 
 The line itself also represents something personal: getting out of my comfort zone.
 
-I'm a hermit. I love staying at home, but I've realized I need new hobbies. Fun fact for young coaches: training all the time, learning about training, giving back to the student-athletes you serve, and being a foodie is great and all, but it can make you pretty one-dimensional (and not particularly popular in the dating scene, but I digress).
+I'm a hermit. I love staying at home, but I've realized I need new hobbies. Fun fact for young coaches: training all the time, learning about training, giving back to the student-athletes you serve, and being a foodie is great and all, but it can make you pretty one-dimensional.
 
-Recently, I took up fly fishing. One of my coworkers, Keita, took me out to the South Fork of the Boise River, and I was hooked! Two of my uncle's friends, Marc (Obi-Wan) and Doug (Yoda), gave me some additional lessons. The cerebral aspect of knowing which fly to use, reading a river, developing technical skills, and everything in between has me hooked.
+Recently, I took up fly fishing. One of my coworkers, Keita, took me out to the South Fork of the Boise River, and I was hooked! Two of my uncle's friends, Marc (Obi-Wan) and Doug (Yoda), gave me some additional lessons. The cerebral aspect of choosing the right fly, reading a river, and developing the technical skills has me hooked.
 
 ![](/assets/blog/Fish.jpeg)
 
@@ -63,7 +63,7 @@ The overall aesthetic was also important to me. I wanted the logo to have the ki
 
 > _The logo represents breaking through barriers and pursuing one's potential._
 
-I want the logo to evolve, grow, and embrace the journey of becoming something even better than where it started.
+I want the logo to evolve and grow, reflecting the journey of becoming something better than where it started.
 
 # In Closing
 
