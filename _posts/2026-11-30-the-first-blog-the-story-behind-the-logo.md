@@ -2,7 +2,7 @@
 title: 'The First Blog: The Story Behind the Logo'
 date: 2026-11-25T06:10:00
 summary: A little introduction to the person behind the logo, the inspiration behind its design, and the philosophy it represents.
-published: false
+published: true
 ---
 
 # Introduction
